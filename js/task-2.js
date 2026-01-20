@@ -28,22 +28,3 @@ const images = [
 const galleryEl = document.querySelector(".gallery");
 const imagesHTML = images.map(img => `<li><img src="${img.url}" alt="${img.alt}"></li>`).join("");
 galleryEl.insertAdjacentHTML("beforeend", imagesHTML);
-
-const style = document.createElement("style");
-style.textContent = `
-ul.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 0;
-    margin: 0;
-  }
-  ul.gallery li {
-    flex-basis: calc((100% - 32px) / 3);
-    list-style: none;
-  }
-  ul.gallery img {
-    width: 100%;
-    display: block;
-  }
-`;
